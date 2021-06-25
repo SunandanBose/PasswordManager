@@ -12,7 +12,7 @@ function Header() {
             <div className="headerTitle">
                 Password
             </div>
-            <div>
+            <div> 
                 <FontAwesomeIcon icon={faCog}  className="downIcon" />
             </div>
         </div>
