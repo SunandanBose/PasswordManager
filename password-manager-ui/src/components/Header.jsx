@@ -3,6 +3,7 @@ import React from "react";
 import '../css/Header.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog } from '@fortawesome/free-solid-svg-icons';
+import  ColoredLine from './ColoredLine.js'
 
 
 function Header() {
@@ -21,15 +22,6 @@ function Header() {
     );
 }
 
-const ColoredLine = ({ color }) => (
-    <hr
-        style={{
-            width: '65vw',
-            color: color,
-            backgroundColor: color,
-            height: 1
-        }}
-    />
-);
+
 
 export default Header;

@@ -2,6 +2,7 @@ import React from "react";
 import '../css/Row.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 function hide(data){
     let length = data.length;
@@ -15,6 +16,7 @@ function Row(props) {
         <div>
             <div className="row">
                 <div className="rowUrl">
+                    <FontAwesomeIcon icon={faLink}  className="linkIcon" />
                     {props.url}
                 </div>
                 <div> 

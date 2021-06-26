@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import '../css/Body.css';
 import { data } from '../db/data.js'
 import Row from './Row.jsx'
+import SearchBar from "./SearchBar";
 
 const BootstrapButton = withStyles({
   root: {
@@ -59,7 +60,8 @@ function Body() {
             <BootstrapButton variant="contained" color="primary" disableRipple className={classes.margin}>
                 Add Item
             </BootstrapButton>
-            <div>
+            <SearchBar />
+            <div className="urlRows">
                 { data.data.map((urlinfo) => <Row id={urlinfo.id} url={urlinfo.url} password={urlinfo.password} /> )}
             </div>
 
