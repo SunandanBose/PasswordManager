@@ -3,7 +3,8 @@ import React from "react";
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import '../css/Body.css';
-
+import { data } from '../db/data.js'
+import Row from './Row.jsx'
 
 const BootstrapButton = withStyles({
   root: {
@@ -46,7 +47,7 @@ const BootstrapButton = withStyles({
 const useStyles = makeStyles((theme) => ({
     margin: {
       margin: theme.spacing(1),
-      left: '33%',
+      left: '35%',
       width: '30%'
     },
   }));
@@ -58,7 +59,10 @@ function Body() {
             <BootstrapButton variant="contained" color="primary" disableRipple className={classes.margin}>
                 Add Item
             </BootstrapButton>
-            
+            <div>
+                { data.data.map((urlinfo) => <Row id={urlinfo.id} url={urlinfo.url} password={urlinfo.password} /> )}
+            </div>
+
         </div>
     );
 }
